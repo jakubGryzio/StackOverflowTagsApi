@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflowTagsApi", "API\StackOverflowTagsApi.csproj", "{42B64CE8-17CD-42B2-9BD6-0C3FCB7748C4}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9B298059-935E-4C2E-8B7B-A967D17A24ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Tests", "API.Tests\API.Tests.csproj", "{DCD5D6BC-43E8-4462-B406-D9592DFBFB3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42B64CE8-17CD-42B2-9BD6-0C3FCB7748C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42B64CE8-17CD-42B2-9BD6-0C3FCB7748C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42B64CE8-17CD-42B2-9BD6-0C3FCB7748C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42B64CE8-17CD-42B2-9BD6-0C3FCB7748C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B298059-935E-4C2E-8B7B-A967D17A24ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B298059-935E-4C2E-8B7B-A967D17A24ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B298059-935E-4C2E-8B7B-A967D17A24ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B298059-935E-4C2E-8B7B-A967D17A24ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCD5D6BC-43E8-4462-B406-D9592DFBFB3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD5D6BC-43E8-4462-B406-D9592DFBFB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD5D6BC-43E8-4462-B406-D9592DFBFB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD5D6BC-43E8-4462-B406-D9592DFBFB3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

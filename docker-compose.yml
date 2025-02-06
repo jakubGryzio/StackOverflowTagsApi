@@ -1,0 +1,9 @@
+services:
+  distributedcache:
+    image: redis
+
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: API
+      dockerfile: Dockerfile
