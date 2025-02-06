@@ -23,12 +23,9 @@ builder.Services.AddStackExchangeRedisCache(options =>
 });
 
 builder.Services.AddSingleton(sp =>
-    ConnectionMultiplexer.Connect(
-        sp.GetRequiredService<IConfiguration>().GetConnectionString("Redis")!, 
-        x => x.AllowAdmin = true));
-
-builder.Services.AddScoped<ICacheService, RedisCacheService>();
-builder.Services.AddScoped<ITagsService, TagsService>();
+    ConnectionMultiplexer.Connect(sp.GetRequiredService<IConfiguration>().GetConnectionString("Redis")!, x => x.AllowAdmin = true));
+builder.Services.AddSingleton<ICacheService, RedisCacheService>();
+builder.Services.AddSingleton<ITagsService, TagsService>();
 
 builder.Services.AddControllers();
 
@@ -51,10 +48,7 @@ app.MapControllers();
 
 app.UseExceptionHandler(options => { });
 
-using (var scope = app.Services.CreateScope())
-{
-    var tagsService = scope.ServiceProvider.GetRequiredService<ITagsService>();
-    await tagsService.FetchTagsAsync();
-}
+var tagsService = app.Services.GetRequiredService<ITagsService>();
+await tagsService.FetchTagsAsync();
 
 app.Run();
